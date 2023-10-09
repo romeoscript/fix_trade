@@ -7,7 +7,7 @@ var dangerColor = getComputedStyle(document.body).getPropertyValue('--danger');
 var infoColor = getComputedStyle(document.body).getPropertyValue('--info');
 var darkColor = getComputedStyle(document.body).getPropertyValue('--dark');
 var lightColor = getComputedStyle(document.body).getPropertyValue('--light');
-if ($('body').hasClass("dark-theme")) {
+if ($('body').hasClass("light-theme")) {
   var chartFontcolor = '#b9c0d3';
   var chartGridLineColor = '#383e5d';
 

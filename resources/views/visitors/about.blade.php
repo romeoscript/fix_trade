@@ -24,7 +24,7 @@
                 <div class="col-lg-6 col-12">
                     <h5 class="subtitle-left">Introducing</h5>
                     <h3>Delivering Superior Investment Results</h3>
-                    <p class="mb-30">Ldxa trade is a top-tier investment management firm that specializes in alternative
+                    <p class="mb-30">{{$compd? $compd->Companyname: 'Coming soon'}} is a top-tier investment management firm that specializes in alternative
                         investment strategies on a global scale. The company's edge lies in its seasoned team of investment
                         experts, a worldwide presence, and a cohesive investment philosophy.</p>
                     <p>This approach to investment is guided by six core principles, namely, risk management, consistency,

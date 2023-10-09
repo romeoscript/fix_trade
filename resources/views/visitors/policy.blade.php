@@ -47,7 +47,7 @@
 
 
 
-                            Depending on your interaction with LDXA Trade, other privacy policies may apply in addition
+                            Depending on your interaction with {{$compd? $compd->Companyname: 'Coming soon'}}, other privacy policies may apply in addition
                             to these Terms & Conditions.<br><br>
 
                             Trademarks and Copyrights<br><br>

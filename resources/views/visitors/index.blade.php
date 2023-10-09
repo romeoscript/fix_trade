@@ -15,28 +15,27 @@
                                 }
                             </style>
                             <!--
-    <table bgcolor="white" style="display: inline-table;">
-      <tr>
-        <td>
-          <b class="c-white mb-3 mb-md-4">
-            <font class="h1-font-size" size="5" color="red">One-of-a-Kind Investment Options Available to All</font>
-          </b>
-        </td>
-      </tr>
-    </table>
-    -->
+        <table bgcolor="white" style="display: inline-table;">
+          <tr>
+            <td>
+              <b class="c-white mb-3 mb-md-4">
+                <font class="h1-font-size" size="5" color="red">One-of-a-Kind Investment Options Available to All</font>
+              </b>
+            </td>
+          </tr>
+        </table>
+        -->
 
 
                             <b class="c-white mb-3 mb-md-4">
 
-                                <font class="h1-font-size" size="5"
-                                    style="background-color: rgba(128, 128, 128); color: white;">One-of-a-Kind
+                                <font class="h1-font-size" size="5" style=" color: white;">One-of-a-Kind
                                     Investment Options Available to All</font>
                             </b>
 
 
                             <br>
-                            <b style="background-color: rgba(128, 128, 128); color: white;"> Ldxa trade has been driven
+                            <b style=" color: white;"> {{ $compd ? $compd->Companyname : 'Coming soon' }} has been driven
                                 by a cohesive set of business principles since its inception. Our commingled investment
                                 vehicles provide retail investors with access to exclusive Premium Holding
                                 opportunities.</b>
@@ -46,7 +45,7 @@
                     </div>
                     <div class="col-lg-6 col-12 d-none d-lg-block wow zoomIn" data-wow-delay="0.4s">
                         <div class="banner-img">
-                            <img src="{{asset('ldxa-trade.com/img/home/index.html')}}" alt="">
+                            <img src="{{ asset('ldxa-trade.com/img/home/index.html') }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -123,7 +122,8 @@
                     <a href="index.html?a=about" class="btn btn-custom mt-4">Read more</a>
                 </div>
                 <div class="col-lg-6 d-none d-lg-block order-lg-first">
-                    <img src="{{asset('ldxa-trade.com/img/pages/about-img2.png')}}" class="img-fluid pr-lg-4" alt="Business">
+                    <img src="{{ asset('ldxa-trade.com/img/pages/about-img2.png') }}" class="img-fluid pr-lg-4"
+                        alt="Business">
                 </div>
             </div>
         </div>
@@ -502,7 +502,7 @@
             <div class="tab-content wow fadeIn">
                 <div role="tabpanel" class="tab-pane fade show active" id="yearly">
                     <div class="row justify-content-center">
-                        <div class="col-md-6 col-lg-4 mb-30">
+                        {{-- <div class="col-md-6 col-lg-4 mb-30">
                             <div class="price-item text-center popular">
                                 <div class="price-top">
                                     <h4 class="mb-0">Bronze Plan</h4>
@@ -537,44 +537,48 @@
                                     <a href="index.html?a=signup" class="btn btn-custom">Invest Now</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-30">
-                            <div class="price-item text-center">
-                                <div class="price-top">
+                        </div> --}}
+                        @if ($investmentplans)
+                            @foreach ($investmentplans as $price)
+                                <div class="col-md-6 col-lg-4 mb-30">
+                                    <div class="price-item text-center">
+                                        <div class="price-top">
 
-                                    <h4 class="mb-0">Silver Plan</h4>
+                                            <h4 class="mb-0">{{ $price->name }}</h4>
 
+                                        </div>
+                                        <div class="price-content">
+                                            <ul class="border-bottom mb-30 mt-md-4 pb-3 text-left">
+                                                <li>
+                                                    <i class="zmdi zmdi-check mr-2"></i>
+                                                    <span class="c-black">Plan Return - {{$price->percentage }}% Daily</span>
+                                                </li>
+                                                <li>
+                                                    <i class="zmdi zmdi-check mr-2"></i>
+                                                    <span class="c-black">Plan Duration - {{ $price->noofrepeat }} Days</span>
+                                                </li>
+                                                <li>
+                                                    <i class="zmdi zmdi-check mr-2"></i>
+                                                    <span class="c-black">Minimum Capital - ${{ $price->minimum }}</span>
+                                                </li>
+                                                <li>
+                                                    <i class="zmdi zmdi-check mr-2"></i>
+                                                    <span class="c-black">Maximum Capital - ${{ $price->maximum }}</span>
+                                                </li>
+                                                <li>
+                                                    <i class="zmdi zmdi-check mr-2"></i>
+                                                    <span class="c-black">Referral Commission - {{ $price->refpercent}}%</span>
+                                                </li>
+
+
+                                            </ul>
+                                            <a href="{{route('register')}}" class="btn btn-custom">Invest Now</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="price-content">
-                                    <ul class="border-bottom mb-30 mt-md-4 pb-3 text-left">
-                                        <li>
-                                            <i class="zmdi zmdi-check mr-2"></i>
-                                            <span class="c-black">Plan Return - 3% Daily</span>
-                                        </li>
-                                        <li>
-                                            <i class="zmdi zmdi-check mr-2"></i>
-                                            <span class="c-black">Plan Duration - 5 Days</span>
-                                        </li>
-                                        <li>
-                                            <i class="zmdi zmdi-check mr-2"></i>
-                                            <span class="c-black">Minimum Capital - $5000</span>
-                                        </li>
-                                        <li>
-                                            <i class="zmdi zmdi-check mr-2"></i>
-                                            <span class="c-black">Maximum Capital - $19,999</span>
-                                        </li>
-                                        <li>
-                                            <i class="zmdi zmdi-check mr-2"></i>
-                                            <span class="c-black">Referral Commission - 10%</span>
-                                        </li>
-
-
-                                    </ul>
-                                    <a href="index.html?a=signup" class="btn btn-custom">Invest Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-30">
+                            @endforeach
+                        @endif
+                        {{-- <div class="col-md-6 col-lg-4 mb-30">
                             <div class="price-item text-center popular">
                                 <div class="price-top">
 
@@ -609,7 +613,7 @@
                                     <a href="index.html?a=signup" class="btn btn-custom">Invest Now</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 
@@ -658,7 +662,7 @@
     <section class="cta-section position-relative">
         <div class="container">
             <div class="cta-box bg-white wow fadeInUp" data-wow-delay="0.2s">
-                <h3>Start growing with LDXA Trade today!</h3>
+                <h3>Start growing with {{ $compd ? $compd->Companyname : 'Coming soon' }} today!</h3>
                 <p class="mb-30 mx-auto">As a company, we frequently assess how we can integrate ESG considerations into
                     our investment strategy to responsibly invest on behalf of our customers. We strive to be mindful of
                     the environmental, social, and governance factors that may impact our investments, and we are

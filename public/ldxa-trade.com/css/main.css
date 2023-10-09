@@ -363,7 +363,7 @@ AUTHOR URL: https://themeforest.net/user/ajay138/
 
 .navigation-bar.sticky {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(78, 99, 215, 0.9)), to(#e9767b));
-  background-image: linear-gradient(to right, rgba(255, 0, 0, 0.9) 0%, #ff2424 100%);
+  background-color:#222437;
   -webkit-box-shadow: 0 0 20px -7px rgba(0, 0, 0, 0.6);
           box-shadow: 0 0 20px -7px rgba(0, 0, 0, 0.6);
 }
@@ -480,7 +480,7 @@ footer.footer {
 
 .section-hero {
   background-image: -webkit-gradient(linear, left top, right top, from(#ff2a2a), to(#e9767b));
-  background-image: url("../img/shapes/background.jpg");
+  background-image: url("../img/shapes/background.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

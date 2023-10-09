@@ -27,7 +27,7 @@
         $(".sidebar-bg-options").removeClass("selected");
         $(this).addClass("selected");
       });
-      $("#sidebar-dark-theme").on("click", function() {
+      $("#sidebar-light-theme").on("click", function() {
         $body.removeClass(sidebar_classes);
         $body.addClass("sidebar-dark");
         $(".sidebar-bg-options").removeClass("selected");

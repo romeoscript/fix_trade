@@ -24,43 +24,50 @@
             <div class="tab-content wow fadeIn">
                 <div role="tabpanel" class="tab-pane fade show active" id="yearly">
                     <div class="row justify-content-center">
-                        <div class="col-md-6 col-lg-4 mb-30">
-                            <div class="price-item text-center popular">
-                                <div class="price-top">
-                                    <h4 class="mb-0">Bronze Plan</h4>
+                        @if ($investmentplans)
+                            @foreach ($investmentplans as $price)
+                                <div class="col-md-6 col-lg-4 mb-30">
+                                    <div class="price-item text-center">
+                                        <div class="price-top">
+
+                                            <h4 class="mb-0">{{ $price->name }}</h4>
+
+                                        </div>
+                                        <div class="price-content">
+                                            <ul class="border-bottom mb-30 mt-md-4 pb-3 text-left">
+                                                <li>
+                                                    <i class="zmdi zmdi-check mr-2"></i>
+                                                    <span class="c-black">Plan Return - {{ $price->percentage }}%
+                                                        Daily</span>
+                                                </li>
+                                                <li>
+                                                    <i class="zmdi zmdi-check mr-2"></i>
+                                                    <span class="c-black">Plan Duration - {{ $price->noofrepeat }}
+                                                        Days</span>
+                                                </li>
+                                                <li>
+                                                    <i class="zmdi zmdi-check mr-2"></i>
+                                                    <span class="c-black">Minimum Capital - ${{ $price->minimum }}</span>
+                                                </li>
+                                                <li>
+                                                    <i class="zmdi zmdi-check mr-2"></i>
+                                                    <span class="c-black">Maximum Capital - ${{ $price->maximum }}</span>
+                                                </li>
+                                                <li>
+                                                    <i class="zmdi zmdi-check mr-2"></i>
+                                                    <span class="c-black">Referral Commission -
+                                                        {{ $price->refpercent }}%</span>
+                                                </li>
 
 
+                                            </ul>
+                                            <a href="{{ route('register') }}" class="btn btn-custom">Invest Now</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="price-content">
-                                    <ul class="border-bottom mb-30 mt-md-4 pb-3 text-left">
-                                        <li>
-                                            <i class="zmdi zmdi-check mr-2"></i>
-                                            <span class="c-black">Plan Return - 2% Daily</span>
-                                        </li>
-                                        <li>
-                                            <i class="zmdi zmdi-check mr-2"></i>
-                                            <span class="c-black">Plan Duration - 5 Days</span>
-                                        </li>
-                                        <li>
-                                            <i class="zmdi zmdi-check mr-2"></i>
-                                            <span class="c-black">Minimum Capital - $50</span>
-                                        </li>
-                                        <li>
-                                            <i class="zmdi zmdi-check mr-2"></i>
-                                            <span class="c-black">Maximum Capital - $4,999</span>
-                                        </li>
-                                        <li>
-                                            <i class="zmdi zmdi-check mr-2"></i>
-                                            <span class="c-black">Referral Commission - 10%</span>
-                                        </li>
-
-
-                                    </ul>
-                                    <a href="?a=signup" class="btn btn-custom">Invest Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-30">
+                            @endforeach
+                        @endif
+                        {{-- <div class="col-md-6 col-lg-4 mb-30">
                             <div class="price-item text-center">
                                 <div class="price-top">
 
@@ -95,8 +102,8 @@
                                     <a href="?a=signup" class="btn btn-custom">Invest Now</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-30">
+                        </div> --}}
+                        {{-- <div class="col-md-6 col-lg-4 mb-30">
                             <div class="price-item text-center popular">
                                 <div class="price-top">
 
@@ -131,7 +138,7 @@
                                     <a href="?a=signup" class="btn btn-custom">Invest Now</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 

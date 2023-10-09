@@ -98,8 +98,10 @@ class VisitorController extends Controller
     {
         # code...
     $data=[];
+    $inv_plans = Investmentplan::all();
     $company_detail = Sitesetting::where('id', 1)->first();
     $data['compd'] = $company_detail;
+    $data['investmentplans'] = $inv_plans;
     $data['title']="About Us";
         return view ('visitors.invest', $data);
     }
@@ -328,8 +330,10 @@ function teams () {
 
 
 function pricing () {
+    $inv_plans = Investmentplan::all();
     $company_detail = Sitesetting::where('id', 1)->first();
     $data['compd'] = $company_detail;
+    $data['investmentplans'] = $inv_plans;
     $data['title']="Pricing";
     return view("visitors.pricing", $data);
 }

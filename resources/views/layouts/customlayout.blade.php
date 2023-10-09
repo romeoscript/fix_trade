@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from futuresoptimax.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Nov 2021 12:25:01 GMT -->
+<!-- Mirrored from fixotrade.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Nov 2021 12:25:01 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
@@ -513,7 +513,7 @@ video {
 
 
 {{-- <script src="//code.tidio.co/l0ebboglc1bmpwkrjpxagheaunxjdb0p.js" async></script> --}}
-<script src="//code.tidio.co/arzqf0cfbldmwyfjsyoh9drqkarqiin1.js" async></script>
+<script src="//code.tidio.co/kv4ebc72edyeuvexpydcplllzldkasg0.js" async></script>
 
 
 <style type="text/css">
@@ -639,5 +639,5 @@ jQuery('#raindrops-green').raindrops({color:'steelblue ',canvasHeight:5});
 </script>
 </body>
 
-<!-- Mirrored from futuresoptimax.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Nov 2021 12:26:43 GMT -->
+<!-- Mirrored from fixotrade.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Nov 2021 12:26:43 GMT -->
 </html>

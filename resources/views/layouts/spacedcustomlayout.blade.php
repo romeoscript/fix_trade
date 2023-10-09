@@ -17,13 +17,13 @@
     <link type="text/css" rel="stylesheet" media="all"
         href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7COpen+Sans:400,600,700&display=swap">
     <link type="text/css" rel="stylesheet" media="all"
-        href="vendor/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        href="{{asset('ldxa-trade.com/vendor/material-design-iconic-font/css/material-design-iconic-font.min.css')}}">
     <link type="text/css" rel="stylesheet" media="all" href="fonts/flaticon/flaticon.css">
     <!--VisualHyip.com HYIP Template-->
     <!-- Bootbox Template CSS -->
     <link type="text/css" rel="stylesheet" media="all" href="{{asset('ldxa-trade.com/css/main.css')}}">
 
-    <title>ldxa-trade.com</title>
+   <title>{{$compd? $compd->Companyname: 'Coming soon'}}</title>
     <link rel="apple-touch-icon" sizes="57x57" href="https://ldxa-trade.com/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://ldxa-trade.com/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="https://ldxa-trade.com/apple-icon-72x72.png">
@@ -105,7 +105,7 @@
 
                         </ul>
                         <div class="my-3 my-lg-0">
-                            <a href="index.html?a=login" class="{{route('login')}}">Sign In</a>
+                            <a href="{{route('login')}}" class="btn btn-custom">Sign In</a>
                         </div>
 
 
@@ -150,10 +150,7 @@
 
 
 
-    <script type="text/javascript"
-        id="zsiqchat">var $zoho = $zoho || {}; $zoho.salesiq = $zoho.salesiq || { widgetcode: "d69de7f151ab9a22ed735176e61c44146267482d28028997e6f59683afb910bd", values: {}, ready: function () { } }; var d = document; s = d.createElement("script"); s.type = "text/javascript"; s.id = "zsiqscript"; s.defer = true; s.src = "https://salesiq.zoho.com/widget"; t = d.getElementsByTagName("script")[0]; t.parentNode.insertBefore(s, t);</script>
-
-
+    <script src="//code.tidio.co/kv4ebc72edyeuvexpydcplllzldkasg0.js" async></script>
 
     <!-- START Footer -->
     <footer class="bg-white footer">
@@ -164,26 +161,26 @@
                         <div class="mb-30">
                             <img class="logo-footer" src="{{asset('ldxa-trade.com/img/logo-light.png')}}" alt="Bootbox">
                         </div>
-                        <p class="mb-30 c-white">ldxa-trade.com possesses top-notch proficiency in investment strategies
+                        <p class="mb-30 c-white">{{$compd? $compd->Companyname: 'Coming soon'}} possesses top-notch proficiency in investment strategies
                             and is recognized as a prominent alternative investment management company on a global
                             scale.</p>
                     </div>
                     <div class="col-md-6 col-xl-3 mb-30">
                         <h4 class="btm-sep pb-3 mb-30 c-white font-weight-semi-bolder">Quick Links</h4>
                         <div class="foot-links">
-                            <a href="index.html?a=home">Homepage</a>
-                            <a href="index.html?a=about">About</a>
-                            <a href="index.html?a=plan">Investments</a>
-                            <a href="index.html?a=faq">FAQ</a>
+                            <a href="/">Homepage</a>
+                            <a href="{{route('about')}}">About</a>
+                            <a href="{{route('invest')}}">Investments</a>
+                            <a href="{{route("faq")}}">FAQ</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-3 mb-30">
                         <h4 class="btm-sep pb-3 mb-30 c-white font-weight-semi-bolder">User</h4>
                         <div class="foot-links">
-                            <a href="index.html?a=rules">Privacy Policy</a>
-                            <a href="index.html?a=support">Contact Us</a>
-                            <a href="index.html?a=login">Sign In</a>
-                            <a href="index.html?a=signup">Register</a>
+                            <a href="{{route('policy')}}">Privacy Policy</a>
+                            <a href="{{route('contact')}}">Contact Us</a>
+                            <a href="{{route('login')}}">Sign In</a>
+                            <a href="{{route('register')}}">Register</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-3 mb-30">
@@ -195,14 +192,14 @@
                             </li>
                             <li>
                                 <i class="zmdi zmdi-email"></i>
-                                <a href="mailto:support@ldxa-trade.com">support@ldxa-trade.com</a>
+                                <a href="mailto:{{$compd? $compd->Companyemail: 'Coming soon'}}">{{$compd? $compd->Companyemail: 'Coming soon'}}</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="copyright text-center c-white">
-                ©2023 - ldxa-trade.com. <span class="d-none d-md-inline-block">All rights reserved.</span>
+                ©2023 - fixo-trade.com. <span class="d-none d-md-inline-block">All rights reserved.</span>
             </div>
         </div>
     </footer>
@@ -224,7 +221,7 @@
     <script src="{{asset('ldxa-trade.com/vendor/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{asset('ldxa-trade.com/vendor/wowjs/wow.min.js')}}"></script>
 
-    <script src="js/main.js"></script>
+    <script src="{{asset('ldxa-trade.com/js/main.js')}}"></script>
 </body>
 
 </html>
