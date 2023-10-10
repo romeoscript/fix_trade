@@ -119,7 +119,7 @@
 
 
 
-                    <a href="index.html?a=about" class="btn btn-custom mt-4">Read more</a>
+                    <a href="{{route('about')}}" class="btn btn-custom mt-4">Read more</a>
                 </div>
                 <div class="col-lg-6 d-none d-lg-block order-lg-first">
                     <img src="{{ asset('ldxa-trade.com/img/pages/about-img2.png') }}" class="img-fluid pr-lg-4"
@@ -133,7 +133,7 @@
 
 
 
-    <section class="about-section bg-white">
+    {{-- <section class="about-section bg-white">
 
         <div class="container">
 
@@ -242,7 +242,7 @@
         </div>
 
         </div>
-    </section>
+    </section> --}}
 
 
     <!-- START Section Services -->
