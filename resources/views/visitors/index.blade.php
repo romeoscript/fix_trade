@@ -622,8 +622,68 @@
         </div>
         </div>
     </section>
+
+
+    <section class="info-section">
+        <div class="auto-container">
+            <div class="sec-title centred">
+                <h5>{{ $compd ? $compd->companyname : 'company name' }}</h5>
+                <h2>Our Happy Clients</h2>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-6 col-sm-4 col-4 title-column">
+
+                    <video id="vid" controls autoplay style="width: inherit;">
+                        <source src="cert/1.mp4" type="video/mp4">
+                    </video>
+                    <script>
+                        document.getElementById('vid').play();
+                    </script>
+
+
+
+
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-4  col-4 title-column">
+
+                    <video controls style="width: inherit;">
+                        <source src="cert/2.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-4 col-4 title-column">
+
+                    <video controls style="width: inherit;">
+                        <source src="cert/3.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-4 col-4 title-column">
+
+                    <video controls style="width: inherit;">
+                        <source src="cert/4.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-4 col-4 title-column">
+
+                    <video controls style="width: inherit;">
+                        <source src="cert/5.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-4 col-4 title-column">
+
+                    <video controls style="width: inherit;">
+                        <source src="cert/6.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+            </div>
+        </div>
+    </section><!-- Section Blog -->
     <!-- END Section Plan -->
-    <section class="project-section bg-w sp-100-70">
+    {{-- <section class="project-section bg-w sp-100-70">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -656,7 +716,7 @@
             <!-- TradingView Widget END -->
         </div>
 
-    </section>
+    </section> --}}
     <!-- END Section Projects -->
     <!-- START Section CTA -->
     <section class="cta-section position-relative">
@@ -680,7 +740,7 @@
 
 
                 </p>
-                <a href="index.html?a=login" class="btn btn-lg btn-custom">Access Your Account <i
+                <a href="{{route('login')}}" class="btn btn-lg btn-custom">Access Your Account <i
                         class="zmdi zmdi-long-arrow-right ml-2"></i></a>
             </div>
         </div>
