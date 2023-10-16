@@ -40,7 +40,7 @@
                                 vehicles provide retail investors with access to exclusive Premium Holding
                                 opportunities.</b>
                             <br>
-                            <a href="index.html?a=signup" class="btn btn-lg btn-custom btn-light mt-4">Sign Up</a>
+                            <a href="{{route('register')}}" class="btn btn-lg btn-custom btn-light mt-4">Sign Up</a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-12 d-none d-lg-block wow zoomIn" data-wow-delay="0.4s">
@@ -534,7 +534,7 @@
 
 
                                     </ul>
-                                    <a href="index.html?a=signup" class="btn btn-custom">Invest Now</a>
+                                    <a href="{{route('register')}}" class="btn btn-custom">Invest Now</a>
                                 </div>
                             </div>
                         </div> --}}
@@ -610,7 +610,7 @@
 
 
                                     </ul>
-                                    <a href="index.html?a=signup" class="btn btn-custom">Invest Now</a>
+                                    <a href="{{route('register')}}" class="btn btn-custom">Invest Now</a>
                                 </div>
                             </div>
                         </div> --}}
